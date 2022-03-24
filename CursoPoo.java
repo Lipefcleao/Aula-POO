@@ -1,10 +1,22 @@
 
 public class CursoPoo {
 	public static void main(String[] args) {
-		Caneta c1 = new Caneta("BIC", "Amarela", 0.4f);
-		c1.status();
+		ContaBanco p1 = new ContaBanco();
+		p1.setNumConta(1111);
+		p1.setDono("Claudio");
+		p1.abrirConta("CC");
 		
-		Caneta c2 = new Caneta("FCL", "Vermelha", 0.5f);
-		c2.status();
+		ContaBanco p2 = new ContaBanco();
+		p2.setNumConta(2222);
+		p2.setDono("Roberta");
+		p2.abrirConta("CP");
+		
+		p1.depositar(100);
+		p2.depositar(500);
+		
+		p2.sacar(100);
+		
+		p1.estadoAtual();
+		p2.estadoAtual();
 	}
 }
